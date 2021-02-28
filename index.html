@@ -40,25 +40,23 @@
 					}
 					
 					const onMouseMove = (e) =>{
-						const reversed = (e.pageX - window.innerWidth/2)/10;
-						const y = (window.innerWidth/2 - e.pageY)/10;
+						const reversed = (e.pageX -window.innerWidth/2)/10;
+						const y = (e.pageY - window.innerWidth/2)/10;
 						
-						for (let i=0; i<stars.length; i++) {
-							const star = stars[i];
-							const ogPos = star.style.originalPosition
-							star.style.right = ogPos.x-reversed+"px";
-							star.style.top = ogPos.y-y+"px";
-							console.log(star.style.right)
-						}
+						const starsDiv = document.getElementById("stars");
+						starsDiv.style.left = reversed+"px";
+						starsDiv.style.top = y+"px";
 					}
 					document.addEventListener('mousemove', onMouseMove);
-					
 				</script>
 			</div>
 			<div id="home-link">
 				<img src="assets/images/whitePlanet.png" width="256px" alt="a planet">
-				<br>
-				<h1>www.warphi.com</h1>
+				<div id="links">
+					<button id="discord" class="circle" onClick="window.open('https://discord.warphi.com/', '_blank')">
+						<a href="https://discord.warphi.com/" target="_blank">— my discord</a>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
