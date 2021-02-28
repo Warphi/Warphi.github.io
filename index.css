@@ -6,6 +6,6 @@ body {
 	background-repeat: no-repeat;
 	background-color: #111111;
 	background-position: center center;
-	/*background-attachment: fixed;*/
+	background-attachment: fixed;
 	background-size: 20%;
 }
