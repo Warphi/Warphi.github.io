@@ -1,29 +1,45 @@
 <!doctype html>
 <html>
 <head>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="shortcut icon" href="assets/icons/favicon">
 	<meta charset="utf-8">
-	<title>Planet Z</title>
-	<link rel="shortcut icon" href="icon.png"/>
-	<link rel="stylesheet" href="index.css">
+	<title>index</title>
 </head>
+
 <body>
 	<div id="page-container">
 		<div id="content-container">
-			<div id="home-link">
-				<img src="whitePlanet.png" alt="" width="256"/>
-				<h1>www.warphi.com</h1>
+			<div id="stars">
+				<div>
+					<img src="assets/images/whiteStar.png" width="15px" alt="">
+				</div>
+				<script>
+					const stars = document.getElementById("stars").children;
+					const max = window.innerHeight;
+					
+					for (let i=0; i<70; i++) {
+						const star = stars[0].cloneNode(true);
+						stars[0].after(star)
+					}
+					
+					for (let i=0; i<stars.length; i++) {
+						const star = stars[i];
+						star.style.top = (Math.random()*max)+"px";
+						star.style.right = (Math.random()*window.innerWidth)+"px";
+						star.firstElementChild.style.width = (Math.random()*10+5)+"px";
+					}
+				</script>
 			</div>
-			<div id="links">
-				<a href="contacts/index.html" target="_self" id="contact">Contact me</a>
-				<br><br>
-				<a href="https://discord.warphi.com/" target="_blank" id="discord">Join my discord</a>
-				<br><br>
-				<a href="portfolio/index.html" target="_self" id="portfolio">Browse my portfolio</a>
+			<div id="home-link">
+				<img src="assets/images/whitePlanet.png" width="256px" alt="a planet">
+				<br>
+				<h1>www.warphi.com</h1>
 			</div>
 		</div>
 	</div>
-	<footer>
-		<p>© 2021 by Planet Z Studios. All Rights Reserved.</p>
-	</footer>
+	<div id="footer">
+		<p>© 2021 by Planet Z Studios. All Rights Reserved</p>
+	</div>
 </body>
 </html>

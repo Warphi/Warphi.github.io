@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+html, body {
+	font-size: 18px;
+	color: white;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	background-color: #111111;
+	height: 100%;
+}
+
+#page-container {
+	min-height: 100vh;
+}
+
+#content-container {
+	overflow: auto;
+	padding-bottom: 25px;
+}
+
+#footer {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	margin-top: -25px;
+	height: 25px;
+	clear: both;
+}
+
+#home-link {
+	clear: both;
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#stars {
+	clear: both;
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+#stars div {
+	position: absolute;
+}
+
+#stars img {
+    animation:spin 10s linear infinite;
+}
+
+
+
