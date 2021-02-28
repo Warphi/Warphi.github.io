@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url("whitePlanet.png");
+	background-repeat: no-repeat;
+	background-color: #111111;
+	background-position: center center;
+	/*background-attachment: fixed;*/
+	background-size: 20%;
+}
