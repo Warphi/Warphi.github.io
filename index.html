@@ -2,9 +2,9 @@
 <html>
 <head>
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="shortcut icon" href="assets/icons/favicon">
+	<link rel="shortcut icon" href="assets/icons/favicon.png">
 	<meta charset="utf-8">
-	<title>index</title>
+	<title>Planet Z</title>
 </head>
 
 <body>
@@ -16,19 +16,43 @@
 				</div>
 				<script>
 					const stars = document.getElementById("stars").children;
-					const max = window.innerHeight;
-					
+
 					for (let i=0; i<70; i++) {
 						const star = stars[0].cloneNode(true);
 						stars[0].after(star)
 					}
-					
+
 					for (let i=0; i<stars.length; i++) {
 						const star = stars[i];
-						star.style.top = (Math.random()*max)+"px";
-						star.style.right = (Math.random()*window.innerWidth)+"px";
-						star.firstElementChild.style.width = (Math.random()*10+5)+"px";
+						const randomX = (Math.random()*(window.innerWidth+200)-100);
+						const randomY = (Math.random()*(window.innerHeight+200)-100);
+						star.style.top = randomY+"px";
+						star.style.right = randomX+"px";
+						star.style.originalPosition = {
+							"x": randomX,
+							"y": randomY
+						}
+						
+						const image = star.firstElementChild
+						if (image) {
+							image.style.width = (Math.random()*10+5)+"px";
+						}
 					}
+					
+					const onMouseMove = (e) =>{
+						const reversed = (e.pageX - window.innerWidth/2)/10;
+						const y = (window.innerWidth/2 - e.pageY)/10;
+						
+						for (let i=0; i<stars.length; i++) {
+							const star = stars[i];
+							const ogPos = star.style.originalPosition
+							star.style.right = ogPos.x-reversed+"px";
+							star.style.top = ogPos.y-y+"px";
+							console.log(star.style.right)
+						}
+					}
+					document.addEventListener('mousemove', onMouseMove);
+					
 				</script>
 			</div>
 			<div id="home-link">
