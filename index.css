@@ -2,21 +2,25 @@
 /* CSS Document */
 
 body {
-	background-image: url("whitePlanet.png");
+	/*background-image: url("whitePlanet.png");*/
 	background-repeat: no-repeat;
 	background-color: #111111;
-	background-position: center center;
+	background-position: 50%;
 	background-attachment: fixed;
 	background-size: 20%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #link {
 	display: block;
-	margin: 60% 0;
+	position: relative;
+	left: 50%;
+	margin-left: -128px;
+	margin-top: 128px;
 }
 
 #link > h1 {
 	color: #FFFFFF;
-	text-align: center;
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace"
 }
