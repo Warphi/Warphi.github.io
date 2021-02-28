@@ -17,7 +17,7 @@ body {
 footer {
 	text-align: center;
 	position: relative;
-	margin-top: -35px;
+	margin-top: -4.5vh;
 	height: 0 px;
 	clear: both;
 	color: white;
@@ -34,6 +34,7 @@ footer {
 }
 
 #home-link > h1 {
+	font-size: 3.6vh;
 	color: #FFFFFF;
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
 }
