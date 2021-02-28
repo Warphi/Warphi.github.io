@@ -9,3 +9,14 @@ body {
 	background-attachment: fixed;
 	background-size: 20%;
 }
+
+#link {
+	display: block;
+	margin: 60% 0;
+}
+
+#link > h1 {
+	color: #FFFFFF;
+	text-align: center;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace"
+}
