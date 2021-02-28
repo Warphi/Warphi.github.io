@@ -2,12 +2,7 @@
 /* CSS Document */
 
 body {
-	/*background-image: url("whitePlanet.png");*/
-	background-repeat: no-repeat;
 	background-color: #111111;
-	background-position: 50%;
-	background-attachment: fixed;
-	background-size: 20%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
